@@ -7,28 +7,34 @@
     $(document).ready(function(){
         $("#submit").click(function(){
           var lokying = 112 ; // E
-          var localMin = $("#hour").val() * 60 + $("min").val() ;
+          var localMin = Number($("#hour").val()) * 60 + Number($("#min").val()) ;
           console.log("localMin : "+ localMin) ;
           var adjust = 0 ;
-          if($("longside").val() = 'E'){
+		  console.log(); 
+          if($("#longside").val() == 'E'){
             adjust = $("#deg").val() - lokying ;
-          }else if($("longside").val() = 'W') {
+          }else if($("#longside").val() == 'W') {
             adjust = $("#deg").val() + lokying ;
           }else{
             return ;
           }
-          var adjustDay = adjust / 60 / 24 ;
-          var adjustHr = adjust/60 - adjustDay * 24 ;
-          var adjustMin = adjust - adjustDay * 60 * 24 - adjustHr * 60 ;
+		  
+		  var adjustedMin = localMin + adjust * 4 ;
+          var adjustDay = Math.floor(adjustedMin / 60 / 24) ;
+          var adjustHr = Math.floor(adjustedMin/60) - adjustDay * 24 ;
+          var adjustMin = adjustedMin - adjustDay * 60 * 24 - adjustHr * 60 ;
           $("#result").html(adjustDay + " day " + adjustHr + ":" + adjustMin) ;
           
         });
     });
   </script>
   <body>
-      小時(0-23) <input id="hour"/> 分鐘 <input id="min/><p/>
-      經度 <select id="longside"><option value="E">E</option><option value="W">W</option></select> <input id="deg"/><p/>
-      <input type="button" id="submit">Submit</input>
+      小時(0-23) <input id="hour" value="16"/> 分鐘 <input id="min" value="28"/><p/>
+      經度 <select id="longside">
+				<option value="E">E</option>
+				<option value="W">W</option>
+			</select> <input id="deg" value="118"/><p/>
+      <input type="button" id="submit" value="Submit"></input><p/>
       <span id="result"></span>
   </body>
 </html>
