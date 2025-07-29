@@ -12,7 +12,7 @@
           var adjust = 0 ;
 		  console.log(); 
           if($("#longside").val() == 'E'){
-            adjust = $("#deg").val() - lokying ;
+            adjust = -$("#deg").val() + lokying ;
           }else if($("#longside").val() == 'W') {
             adjust = $("#deg").val() + lokying ;
           }else{
@@ -29,7 +29,8 @@
     });
   </script>
   <body>
-      小時(0-23) <input id="hour" value="16"/> 分鐘 <input id="min" value="28"/><p/>
+      小時 <input id="hour" value="16"/><p/>
+分鐘 <input id="min" value="28"/><p/>
       經度 <select id="longside">
 				<option value="E">E</option>
 				<option value="W">W</option>
