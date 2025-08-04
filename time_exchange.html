@@ -47,48 +47,49 @@
 	}
   </style>
   <body>
+	<div class="container">
   
-  <form class="needs-validation" novalidate>
-  
-	<span style="color:red"></span><p/>
-  
-	<div class="row mb-3">
-		<label for="min" class="col-sm-2 col-form-label">Hour</label>
-		<div class="col-sm-10">
-			<input id="hour" type="text" class="form-control" id="min">
-		</div>
-	</div>
-
-	<div class="row mb-3">
-		<label for="min" class="col-sm-2 col-form-label">Min</label>
-		<div class="col-sm-10">
-			<input type="text" class="form-control" id="min" >
-		</div>
-	</div>
-
-
-	<div class="row mb-3">
-		<label for="min" class="col-sm-2 col-form-label">經度</label>
-		<div class="col-sm-10">
-			<div class="input-group">
-				<input id="deg" type="text" aria-label=""  class="form-control">
-				<select id="longside" class="form-select">
-					<option >-- select --</option>
-					<option value="E">E</option>
-					<option value="W">W</option>
-				</select>
+	  <form class="needs-validation" novalidate>
+	  
+		<span style="color:red"></span><p/>
+	  
+		<div class="row mb-3">
+			<label for="min" class="col-sm-2 col-form-label">Hour</label>
+			<div class="col-sm-10">
+				<input id="hour" type="text" class="form-control" id="min">
 			</div>
 		</div>
-	</div>
 	
-	</form>
+		<div class="row mb-3">
+			<label for="min" class="col-sm-2 col-form-label">Min</label>
+			<div class="col-sm-10">
+				<input type="text" class="form-control" id="min" >
+			</div>
+		</div>
 	
-	<button id="submit" type="button" class="btn btn-primary">Submit</button> 
 	
-	<div class="row mb-3"></div>
-	<div class="row mb-3">
-	  <div id="result" class="alert alert-success" role="alert" style="display:none;"></div>
-	</div>
-
+		<div class="row mb-3">
+			<label for="min" class="col-sm-2 col-form-label">經度</label>
+			<div class="col-sm-10">
+				<div class="input-group">
+					<input id="deg" type="text" aria-label=""  class="form-control">
+					<select id="longside" class="form-select">
+						<option >-- select --</option>
+						<option value="E">E</option>
+						<option value="W">W</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		
+		</form>
+		
+		<button id="submit" type="button" class="btn btn-primary">Submit</button> 
+		
+		<div class="row mb-3"></div>
+		<div class="row mb-3">
+		  <div id="result" class="alert alert-success" role="alert" style="display:none;"></div>
+		</div>
+	<div class="container">
   </body>
 </html>
